@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  min-height: 400px;
+  flex-direction: column;
+  border: 1px solid black;
+  max-width: 300px;
+  min-width: 300px;
+  align-self: stretch;
+  border: 2px solid black;
+  gap: 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.cardImage {
+  width: 100%;
+  height: 250px;
+  aspect-ratio: 4/3;
+}
+
+h3 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+
+
+/* .card:hover .HowerCard {
+  animation: moveOut 0.5s ease-in-out easy-in-out;
+}
+
+@keyframes moveOut {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+} */
+

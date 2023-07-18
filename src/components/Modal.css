@@ -1,0 +1,10 @@
+.modal {
+    min-width: 300px;
+    max-width: 500px;
+    overflow-y: auto;
+    border: 1px solid red;
+    position: absolute;
+    top: 30%;
+    left: 34%;
+    background-color: aqua;
+}

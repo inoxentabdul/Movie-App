@@ -1,0 +1,28 @@
+.HowerCard {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  min-height: 400px;
+  max-height: auto;
+  flex-direction: column;
+  max-width: 300px;
+  min-width: 300px;
+  background-color: rgb(255, 255, 255);
+  gap: 20px;
+  padding-bottom: 10px;
+  transform: translateY(100%);
+  animation: moveIn 2s ease-in-out forwards;
+
+}
+
+@keyframes moveIn {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
