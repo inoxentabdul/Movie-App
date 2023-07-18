@@ -6,7 +6,10 @@
     align-items: center;
     background-color: #f2f2f2;
   }
-  
+
+  .links button {
+    cursor: pointer;
+  }
   .movies {
     font-weight: bold;
   }

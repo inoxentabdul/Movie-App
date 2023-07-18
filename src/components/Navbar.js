@@ -1,8 +1,9 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Card from './Card';
 import axios from 'axios';
 import './Nav.css';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [inputValue, setInputValue] = useState("James Bond");
@@ -23,13 +24,24 @@ const Navbar = () => {
       error && setLoading(false);
     }
   };
-  useEffect((e) => {
-    handleSearch(e);
-  },[])
+  useEffect(() => {
+    handleSearch();
+  }, [])
   return (
     <>
       <div className='nav'>
-        <div>Movies</div>
+        <div className='links'>
+          <NavLink to='/'>
+            <button>Movies</button>
+          </NavLink>
+          <NavLink to='/signup'>
+            <button>Signup</button>
+          </NavLink>
+          <NavLink to='/login'>
+            <button>Login</button>
+          </NavLink>
+
+        </div>
         <form onSubmit={handleSearch}>
           <div className='searchIcon'>
             <SearchOutlinedIcon className='icon' />
@@ -57,7 +69,7 @@ const Navbar = () => {
           padding: '20px 0px'
         }}
       >
-        {loading ? "Loading..." : search.map((film) => <Card key={film.Title} film={film} />)}
+        {loading ? "Loading..." : search && search.map((film) => <Card key={film.Title} film={film} />)}
       </div>
     </>
   );
